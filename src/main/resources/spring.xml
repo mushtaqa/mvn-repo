@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="triangleService" class="com.mushtaq.spring.service.TriangleService">
+		</bean>
+		
+		<!-- bean definition & AOP specific configuration -->
+   
+	<bean name="circle" class="com.mushtaq.spring.bean.Circle">
+		<property name="name" value="circle name"/>
+	</bean>
+	<bean name="triangle" class="com.mushtaq.spring.bean.Triangle">
+		<property name="name" value="Triangle name"/>
+	</bean>
+	
+   <bean name="shapeService" class="com.mushtaq.spring.bean.ShapeService" autowire="byName">
+		
+	</bean>
+	
+</beans>
